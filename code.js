@@ -1,4 +1,8 @@
 function convertToCSV() {
+    if (document.getElementById("excelFile").files.length === 0) {
+      alert("No file is selected!")
+      return
+    }
     const excelFile = document.getElementById("excelFile").files[0];
     const fileReader = new FileReader();
   
